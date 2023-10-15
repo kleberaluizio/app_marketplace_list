@@ -20,7 +20,7 @@ public class ListOfItems {
     @Column(name = "status")
     private Integer status;
 
-    @OneToMany(mappedBy = "list", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "listOfItems", cascade = CascadeType.ALL)
     private List<ItemList> items;
 
     public ListOfItems(){}
