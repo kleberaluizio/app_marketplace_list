@@ -15,6 +15,9 @@ public class ProductServiceImpl implements IProductService{
 
     @Override
     public Product createNewProduct(Product product) {
+        if(product.getName() == null || product.getName().length() == 0){
+            return null;
+        }
         return repository.save(product);
     }
 
