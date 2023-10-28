@@ -5,13 +5,9 @@
         </div>
     </div>
     <hr/>
-    <div class="row">
-        <div class="col-4">
-            dd/mm/yyy
-        </div>
-        <div class="col-8">
-            List R$ xxxx,xx
-        </div>
+    <div class="row list" *ngFor="let ITEM of ListOfItem">
+        <div class="col-4"> {{ITEM.dataOfCreation}}</div>
+        <div class="col-8"> {{ITEM.marketplaceName}} R$ {{ITEM.totalValue}}</div>
     </div>
 </div>
 

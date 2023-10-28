@@ -1,6 +1,7 @@
 package br.com.kleberaluizio.appmarketplace.model;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "tbl_product")
@@ -34,4 +35,5 @@ public class Product {
     public void setName(String name) {
         this.name = name;
     }
+
 }
