@@ -27,4 +27,17 @@ export class ListsComponent implements OnInit{
     );
   }
 
+  public registerList(){
+    console.log(this.newList);
+    this.service.registerList(this.newList).subscribe(
+      (res: List) => {
+        alert("New list registered!")
+        this.getAllLists();
+      },
+      (err) => {
+        alert("Erro ao cadastrar listas de compra")
+      }
+    );
+  }
+
 }

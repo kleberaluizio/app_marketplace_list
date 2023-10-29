@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
 @CrossOrigin("*")
+@RestController
 public class ListOfItemsController {
 
     @Autowired
     private IListService service;
 
-    @PostMapping("/List-of-items")
+    @PostMapping("/list-of-items")
     public ResponseEntity createList(@RequestBody ListOfItems list){
         ListOfItems newList = service.createNewList(list);
 
@@ -32,7 +32,7 @@ public class ListOfItemsController {
                 .body(newList);
     }
 
-    @GetMapping("/List-of-items/{id}")
+    @GetMapping("/list-of-items/{id}")
     public  ResponseEntity getList(@PathVariable("id") Integer id){
         ListOfItems list = service.findById(id);
 
@@ -53,7 +53,7 @@ public class ListOfItemsController {
                 .body(service.findAll());
     }
 
-    @PutMapping("/List-of-items/{id}")
+    @PutMapping("/list-of-items/{id}")
     public ResponseEntity updateList(@PathVariable("id") Integer id){
         ListOfItems list = service.closeList(id);
 
@@ -68,7 +68,7 @@ public class ListOfItemsController {
     }
 
 
-    @DeleteMapping("/List-of-items/{id}")
+    @DeleteMapping("/list-of-items/{id}")
     public  ResponseEntity deleteList(@PathVariable("id") Integer id){
 
         ListOfItems list = service.findById(id);

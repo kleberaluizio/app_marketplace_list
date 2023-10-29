@@ -14,4 +14,8 @@ export class ListsService {
   public getLists(): Observable<List[]>{
     return this.http.get<List[]>(environment.urlAPI+"/list-of-items");
   }
+
+  public registerList(List : List): Observable<List> {
+    return this.http.post<List>(environment.urlAPI+"/list-of-items",List);  
+  }
 }
