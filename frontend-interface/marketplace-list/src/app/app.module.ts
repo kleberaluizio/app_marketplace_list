@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ListsComponent } from './components/lists/lists.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ListsComponent } from './components/lists/lists.component';
 import { ListdetailComponent } from './components/listdetail/listdetail.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FormsModule
+    HttpClientModule,  // Componente de requisições HTTP
+    FormsModule        // Componente de manipulação de formulário
   ],
   providers: [],
   bootstrap: [AppComponent]

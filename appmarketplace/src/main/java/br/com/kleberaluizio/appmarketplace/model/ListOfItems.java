@@ -1,6 +1,7 @@
 package br.com.kleberaluizio.appmarketplace.model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class ListOfItems {
     @Column(name = "id_list")
     private Integer id;
     @Column(name = "creation_date", nullable = false)
-    private Date dateOfCreation;
+    private LocalDate dateOfCreation;
     @Column(name = "marketplace_name", length = 50)
     private String marketplaceName;
     @Column(name = "total_value")
@@ -25,7 +26,7 @@ public class ListOfItems {
 
     public ListOfItems(){}
 
-    public ListOfItems(Date dateOfCreation, String marketplaceName, Double totalValue, Integer status) {
+    public ListOfItems(LocalDate dateOfCreation, String marketplaceName, Double totalValue, Integer status) {
         this.dateOfCreation = dateOfCreation;
         this.marketplaceName = marketplaceName;
         this.totalValue = totalValue;
@@ -40,11 +41,11 @@ public class ListOfItems {
         this.id = id;
     }
 
-    public Date getDateOfCreation() {
+    public LocalDate getDateOfCreation() {
         return dateOfCreation;
     }
 
-    public void setDateOfCreation(Date dateOfCreation) {
+    public void setDateOfCreation(LocalDate dateOfCreation) {
         this.dateOfCreation = dateOfCreation;
     }
 

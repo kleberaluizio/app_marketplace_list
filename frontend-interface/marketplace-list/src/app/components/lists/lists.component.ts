@@ -9,24 +9,22 @@ import { ListsService } from 'src/app/services/lists.service';
 })
 export class ListsComponent implements OnInit{
 
-
-  public lists: List[] = [];
-  constructor(private service: ListsService){
-
-  }
+  public Lists: List[] = [];
+  public newList: List = new List();
+  constructor(private service: ListsService){}
 
   ngOnInit(): void {
     this.getAllLists();
   }
-
   public getAllLists(){
     this.service.getLists().subscribe(
-      (res: List[])=>{
-        this.lists = res;
+      (res: List[]) => {
+        this.Lists = res;
       },
-      (err)=>{
-        alert("Error during the process of getting lists of items!")
+      (err) => {
+        alert("Erro ao recuperar listas de compra")
       }
     );
   }
+
 }

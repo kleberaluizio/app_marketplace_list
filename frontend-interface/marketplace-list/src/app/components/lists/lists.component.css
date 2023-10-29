@@ -9,3 +9,7 @@
     color: white;
     border-radius: 50%;
 }
+
+.List{
+    border-bottom: 1px solid gray;
+}
