@@ -6,7 +6,7 @@ import { ListdetailComponent } from './components/listdetail/listdetail.componen
 
 const routes: Routes = [
   {path:'',component: ListsComponent},
-  {path:'detail',component: ListdetailComponent}
+  {path:'detail/:id',component: ListdetailComponent}
 
 ];
 

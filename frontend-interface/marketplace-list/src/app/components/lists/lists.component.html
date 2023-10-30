@@ -1,13 +1,17 @@
-<div class="container">
-    <div class="row">
+<div class="container mt-2">
+    <div class="row title">
         <div class="col-12">
         <h3 class="text-center">Shopping List</h3>
         </div>
     </div>
-    <hr/>
+    <div class="row title mt-2 mb-2">
+        <div class="col-4"> Data</div>
+        <div class="col-4"> Name</div>
+        <div class="col-4"> Total Value</div>
+    </div>
     <div class="row List" *ngFor="let ITEM of Lists">
         <div class="col-4"> {{ITEM.dateOfCreation}}</div>
-        <div class="col-4"> {{ITEM.marketplaceName}}</div>
+        <div class="col-4"> <a [routerLink] = "['/detail',ITEM.id]"> {{ITEM.marketplaceName}}</a></div>
         <div class="col-4"> R$ {{ITEM.totalValue}}</div>
     </div>
 </div>
@@ -16,7 +20,7 @@
 <!-- Button trigger modal -->
 <button type="button" id="button-new-list" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     <i class="fa-solid fa-plus fa-2x"></i>
-  </button>
+</button>
   
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
